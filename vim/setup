@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [[ -z "$(which vim)" || -z "$(which vimtutor)" ]]; then
+  echo Need to install full vim.
+  exit 1
+fi
+
+echo Configuring Vim
+ln -s "$PWD/vimrc" "$HOME/.vimrc"
+ls -la ~/.vimrc
